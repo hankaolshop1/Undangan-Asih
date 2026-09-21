@@ -1,0 +1,152 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#4e183d" />
+    <meta name="description" content="Undangan pernikahan Siti Asih dan Fahril" />
+    <title>Undangan Pernikahan | Siti Asih & Fahril</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="invitation-cover" id="invitationCover" role="dialog" aria-modal="true" aria-label="Sampul undangan">
+      <div class="cover-petals" aria-hidden="true"><i>❀</i><i>✦</i><i>❁</i><i>✦</i><i>❀</i></div>
+      <div class="cover-arch">
+        <i class="cover-sparkle sparkle-one" aria-hidden="true">✦</i>
+        <i class="cover-sparkle sparkle-two" aria-hidden="true">✦</i>
+        <i class="cover-sparkle sparkle-three" aria-hidden="true">✦</i>
+        <p class="eyebrow">The Wedding Of</p>
+        <h1>Siti Asih <span>&amp;</span> Fahril</h1>
+        <p class="cover-date">Sabtu, 14 November 2026</p>
+        <button class="open-button" id="openInvitation" type="button">Buka Undangan <span>✦</span></button>
+      </div>
+    </div>
+    <audio id="weddingMusic" loop preload="auto">
+      <source src="leberch-wedding-piano-595793.mp3" type="audio/mpeg" />
+    </audio>
+    <button class="music-toggle" id="musicToggle" type="button" aria-label="Matikan musik" aria-pressed="true">
+      <span aria-hidden="true">♫</span>
+    </button>
+    <main>
+      <section class="hero section-shell" id="beranda">
+        <div class="live-ornaments" aria-hidden="true"><i>❀</i><i>✦</i><i>❁</i><i>✦</i></div>
+        <div class="batik batik-top"></div>
+        <div class="floral floral-left" aria-hidden="true">❀</div>
+        <div class="floral floral-right" aria-hidden="true">❀</div>
+        <div class="hero-content">
+          <div class="hero-ring" aria-hidden="true"></div>
+          <p class="eyebrow">The Wedding Of</p>
+          <h1>Siti Asih <span>&amp;</span> Fahril</h1>
+          <div class="hero-divider"><span>✦</span></div>
+          <p class="date">Sabtu, 14 November 2026</p>
+        </div>
+        <a class="scroll-cue" href="#mempelai" aria-label="Lihat undangan">⌄</a>
+      </section>
+
+      <section class="opening section-shell" id="mempelai">
+        <div class="live-ornaments" aria-hidden="true"><i>❀</i><i>✦</i><i>❁</i><i>✦</i></div>
+        <div class="corner-ornament corner-top" aria-hidden="true">❧</div>
+        <p class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
+        <p class="intro">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
+        <p class="copy">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.</p>
+        <div class="ornament"><span>❧</span></div>
+        <article class="person">
+          <p class="role">Mempelai Wanita</p>
+          <h2>Siti Asih</h2>
+          <p>Putri Bungsu dari</p>
+          <p><strong>Bapak Karnawi (Awi)</strong><br />&amp;<br /><strong>Ibu Ramdah</strong></p>
+        </article>
+        <div class="and">&amp;</div>
+        <article class="person">
+          <p class="role">Mempelai Pria</p>
+          <h2>Fahril</h2>
+          <p>Putra Bungsu dari</p>
+          <p><strong>Bapak H. Udin Kantin (Alm)</strong><br />&amp;<br /><strong>Ibu Nuryanih</strong></p>
+        </article>
+      </section>
+
+      <section class="event-section section-shell" id="acara">
+        <div class="live-ornaments" aria-hidden="true"><i>❀</i><i>✦</i><i>❁</i><i>✦</i></div>
+        <div class="corner-ornament corner-event" aria-hidden="true">✦</div>
+        <p class="eyebrow">Save The Date</p>
+        <h2>Rangkaian Acara</h2>
+        <div class="event-cards">
+          <article class="event-card">
+            <div class="icon">✦</div>
+            <h3>Akad Nikah</h3>
+            <p class="event-date">Sabtu<br /><strong>14 November 2026</strong></p>
+            <p>10.00 WIB<br />s.d. Selesai</p>
+          </article>
+          <article class="event-card">
+            <div class="icon">❀</div>
+            <h3>Resepsi</h3>
+            <p class="event-date">Sabtu<br /><strong>14 November 2026</strong></p>
+            <p>09.00 WIB<br />s.d. Selesai</p>
+          </article>
+        </div>
+        <div class="countdown" aria-label="Hitung mundur menuju resepsi">
+          <div><b id="days">00</b><span>Hari</span></div>
+          <div><b id="hours">00</b><span>Jam</span></div>
+          <div><b id="minutes">00</b><span>Menit</span></div>
+          <div><b id="seconds">00</b><span>Detik</span></div>
+        </div>
+      </section>
+
+      <section class="location section-shell" id="lokasi">
+        <div class="live-ornaments" aria-hidden="true"><i>❀</i><i>✦</i><i>❁</i><i>✦</i></div>
+        <p class="eyebrow">Tempat Acara</p>
+        <h2>Lokasi</h2>
+        <div class="address-card">
+          <div class="map-pin">⌖</div>
+          <h3>Kediaman Mempelai Wanita</h3>
+          <p>Kp. Pisangan Pangsor RT 02/03<br />Desa Sangiang<br />Kec. Sepatan Timur<br />Kab. Tangerang</p>
+          <a class="button" href="https://maps.app.goo.gl/n9aQ3E3HSSGz3oMX7" target="_blank" rel="noopener noreferrer">Buka Google Maps <span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="guestbook section-shell" id="buku-tamu">
+        <div class="live-ornaments" aria-hidden="true"><i>❀</i><i>✦</i><i>❁</i><i>✦</i></div>
+        <div class="corner-ornament corner-top" aria-hidden="true">❧</div>
+        <p class="eyebrow">Wedding Guestbook</p>
+        <h2>Buku Tamu</h2>
+        <p class="guestbook-intro">Kirim doa dan konfirmasi kehadiran Anda untuk kedua mempelai.</p>
+        <form class="guestbook-form" id="guestbookForm">
+          <label for="guestName">Nama Anda</label>
+          <input id="guestName" name="name" type="text" maxlength="50" autocomplete="name" placeholder="Masukkan nama" required />
+          <label for="attendance">Konfirmasi Kehadiran</label>
+          <select id="attendance" name="attendance" required>
+            <option value="hadir">InsyaAllah hadir</option>
+            <option value="tidak-hadir">Maaf, belum bisa hadir</option>
+          </select>
+          <label for="guestMessage">Ucapan &amp; Doa</label>
+          <textarea id="guestMessage" name="message" maxlength="500" rows="4" placeholder="Tulis ucapan terbaik Anda" required></textarea>
+          <button class="button" id="guestbookSubmit" type="submit">Kirim Ucapan <span>✦</span></button>
+          <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+        </form>
+        <div class="guestbook-list" id="guestbookList" aria-live="polite">
+          <p class="guestbook-loading">Memuat ucapan tamu...</p>
+        </div>
+      </section>
+
+      <section class="closing section-shell">
+        <div class="live-ornaments" aria-hidden="true"><i>❀</i><i>✦</i><i>❁</i><i>✦</i></div>
+        <div class="floral floral-bottom" aria-hidden="true">❀</div>
+        <p class="copy">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
+        <p class="thanks">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
+        <p class="eyebrow">Kami yang berbahagia</p>
+        <h2>Siti Asih <span>&amp;</span> Fahril</h2>
+      </section>
+    </main>
+    <nav class="bottom-nav" aria-label="Navigasi undangan">
+      <a href="#beranda">⌂<span>Beranda</span></a>
+      <a href="#mempelai">♡<span>Mempelai</span></a>
+      <a href="#acara">✦<span>Acara</span></a>
+      <a href="#lokasi">⌖<span>Lokasi</span></a>
+      <a href="#buku-tamu">✎<span>Buku Tamu</span></a>
+    </nav>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
