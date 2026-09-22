@@ -12,6 +12,16 @@ Situs undangan pernikahan statis bertema **Luxury Burgundy & Gold Royal Wedding*
 
 Data undangan dan tautan Google Maps sudah dimasukkan. Situs memakai musik opsional `leberch-wedding-piano-595793.mp3`; jika ingin musik aktif, unggah file tersebut di folder yang sama dengan `index.html`. Edit `index.html` jika ada pembaruan informasi acara atau nama keluarga.
 
+## Aset desain
+
+Folder `assets/` berisi aset visual ringan yang langsung dipakai oleh halaman:
+
+- `floral-corner.png` — ornamen bunga burgundy dan daun gold.
+- `wedding-path.png` — foto lorong venue dengan lentera.
+- `burgundy-envelope.png` — foto amplop burgundy dengan wax seal.
+
+Versi `.svg` juga disertakan sebagai fallback ringan. Versi PNG dipakai sebagai aset utama karena lebih mendekati referensi visual fotorealistik.
+
 ## Mengaktifkan buku tamu Firebase
 
 1. Buat proyek di [Firebase Console](https://console.firebase.google.com/), lalu tambahkan **Web App**.
