@@ -52,9 +52,13 @@ setInterval(updateCountdown, 1000);
 document.body.classList.add("no-scroll");
 
 openButton.addEventListener("click", () => {
-  cover.classList.add("is-open");
-  document.body.classList.remove("no-scroll");
-  musicToggle.classList.add("is-visible");
+  openButton.disabled = true;
+  cover.classList.add("is-opening");
+  window.setTimeout(() => {
+    cover.classList.add("is-open");
+    document.body.classList.remove("no-scroll");
+    musicToggle.classList.add("is-visible");
+  }, 900);
   music.play().catch(() => {
     musicToggle.setAttribute("aria-label", "Putar musik");
     musicToggle.setAttribute("aria-pressed", "false");
