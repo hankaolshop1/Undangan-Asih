@@ -33,6 +33,33 @@ for (let index = 0; index < 18; index += 1) {
   petals.appendChild(petal);
 }
 
+document.querySelectorAll(".section-shell").forEach((section, sectionIndex) => {
+  section.classList.add("reveal-section");
+  const decoration = document.createElement("div");
+  decoration.className = "section-sparkles";
+  decoration.setAttribute("aria-hidden", "true");
+  for (let index = 0; index < 5; index += 1) {
+    const sparkle = document.createElement("i");
+    sparkle.textContent = index % 2 ? "✦" : "•";
+    sparkle.style.setProperty("--x", `${12 + Math.random() * 76}%`);
+    sparkle.style.setProperty("--y", `${14 + Math.random() * 72}%`);
+    sparkle.style.setProperty("--delay", `${(sectionIndex * 0.35 + index * 0.7) % 3}s`);
+    decoration.appendChild(sparkle);
+  }
+  section.appendChild(decoration);
+});
+
+const revealObserver = new IntersectionObserver((entries) => {
+  entries.forEach((entry) => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("is-visible");
+      revealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.16 });
+
+document.querySelectorAll(".reveal-section").forEach((section) => revealObserver.observe(section));
+
 function updateCountdown() {
   const remaining = Math.max(0, targetDate - Date.now());
   const units = [
