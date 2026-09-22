@@ -148,3 +148,24 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
   });
 }, { threshold: 0.12 });
 revealSections.forEach((section) => revealObserver.observe(section));
+
+
+/* NAVBAR ACTIVE FIX */
+const navLinks = document.querySelectorAll('.bottom-nav a');
+const navSections = document.querySelectorAll('section[id]');
+
+function updateActiveNav(){
+ let current='';
+ navSections.forEach(section=>{
+   const top=section.offsetTop-200;
+   const height=section.offsetHeight;
+   if(window.scrollY>=top && window.scrollY < top+height){
+      current=section.id;
+   }
+ });
+ navLinks.forEach(link=>{
+   link.classList.toggle('active', link.getAttribute('href') === '#'+current);
+ });
+}
+window.addEventListener('scroll', updateActiveNav);
+window.addEventListener('load', updateActiveNav);
