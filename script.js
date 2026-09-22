@@ -169,3 +169,5 @@ function updateActiveNav(){
 }
 window.addEventListener('scroll', updateActiveNav);
 window.addEventListener('load', updateActiveNav);
+
+// navbar fix
