@@ -14,9 +14,6 @@ import { firebaseConfig } from "./firebase-config.js";
 const targetDate = new Date("2026-11-14T09:00:00+07:00").getTime();
 const ids = ["days", "hours", "minutes", "seconds"];
 const cover = document.getElementById("invitationCover");
-const envelopeScene = document.getElementById("envelopeScene");
-const envelopeButton = document.getElementById("envelopeButton");
-const cardScene = document.getElementById("cardScene");
 const openButton = document.getElementById("openInvitation");
 const music = document.getElementById("weddingMusic");
 const musicToggle = document.getElementById("musicToggle");
@@ -24,6 +21,17 @@ const guestbookForm = document.getElementById("guestbookForm");
 const guestbookList = document.getElementById("guestbookList");
 const guestbookSubmit = document.getElementById("guestbookSubmit");
 const formStatus = document.getElementById("formStatus");
+const petals = document.querySelector(".petals");
+
+for (let index = 0; index < 18; index += 1) {
+  const petal = document.createElement("span");
+  petal.className = "petal";
+  petal.style.left = `${Math.random() * 100}%`;
+  petal.style.animationDelay = `${Math.random() * -12}s`;
+  petal.style.animationDuration = `${7 + Math.random() * 7}s`;
+  petal.style.transform = `scale(${0.65 + Math.random() * 0.7})`;
+  petals.appendChild(petal);
+}
 
 function updateCountdown() {
   const remaining = Math.max(0, targetDate - Date.now());
@@ -42,14 +50,6 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 document.body.classList.add("no-scroll");
-
-envelopeButton.addEventListener("click", () => {
-  envelopeButton.classList.add("is-opened");
-  setTimeout(() => {
-    envelopeScene.classList.add("is-opened");
-    cardScene.classList.add("is-visible");
-  }, 450);
-});
 
 openButton.addEventListener("click", () => {
   cover.classList.add("is-open");
@@ -147,15 +147,3 @@ function initializeGuestbook() {
 }
 
 initializeGuestbook();
-
-const revealSections = document.querySelectorAll("main section:not(.hero)");
-revealSections.forEach((section) => section.classList.add("reveal-section"));
-const revealObserver = new IntersectionObserver((entries, observer) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add("is-revealed");
-      observer.unobserve(entry.target);
-    }
-  });
-}, { threshold: 0.12 });
-revealSections.forEach((section) => revealObserver.observe(section));

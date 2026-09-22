@@ -1,6 +1,6 @@
-# Undangan Pernikahan Siti Asih & Fahril
+# Undangan Pernikahan Asih & Fahri
 
-Situs undangan pernikahan statis, tanpa proses build dan siap di-host di GitHub Pages.
+Situs undangan pernikahan statis bertema **Luxury Burgundy & Gold Royal Wedding**, tanpa proses build dan siap di-host di GitHub Pages. Desain menggunakan CSS sehingga tidak membutuhkan aset gambar tambahan: sampul amplop, wax seal, ornamen floral, efek petals, dan frame venue dirender langsung di browser.
 
 ## Publikasi ke GitHub Pages
 
@@ -10,7 +10,7 @@ Situs undangan pernikahan statis, tanpa proses build dan siap di-host di GitHub 
 4. Pilih branch `main`, folder `/ (root)`, lalu klik **Save**.
 5. GitHub akan menampilkan URL undangan setelah deployment selesai.
 
-Data undangan dan tautan Google Maps sudah dimasukkan. Situs juga memakai musik `leberch-wedding-piano-595793.mp3`; pertahankan nama file tersebut dan unggah di folder yang sama dengan `index.html`. Edit `index.html` jika ada pembaruan informasi acara.
+Data undangan dan tautan Google Maps sudah dimasukkan. Situs memakai musik opsional `leberch-wedding-piano-595793.mp3`; jika ingin musik aktif, unggah file tersebut di folder yang sama dengan `index.html`. Edit `index.html` jika ada pembaruan informasi acara atau nama keluarga.
 
 ## Mengaktifkan buku tamu Firebase
 
