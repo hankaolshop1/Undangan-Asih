@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#4e183d" />
+    <meta name="theme-color" content="#2a0812" />
     <meta name="description" content="Undangan pernikahan Siti Asih dan Fahril" />
     <title>Undangan Pernikahan | Siti Asih & Fahril</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -12,38 +12,59 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <!-- SAMPUL: amplop + segel lilin, lalu kartu "Buka Undangan" -->
     <div class="invitation-cover" id="invitationCover" role="dialog" aria-modal="true" aria-label="Sampul undangan">
       <div class="cover-petals" aria-hidden="true"><i>❀</i><i>✦</i><i>❁</i><i>✦</i><i>❀</i></div>
-      <div class="cover-arch">
-        <i class="cover-sparkle sparkle-one" aria-hidden="true">✦</i>
-        <i class="cover-sparkle sparkle-two" aria-hidden="true">✦</i>
-        <i class="cover-sparkle sparkle-three" aria-hidden="true">✦</i>
+
+      <div class="envelope-scene" id="envelopeScene">
         <p class="eyebrow">The Wedding Of</p>
-        <h1>Siti Asih <span>&amp;</span> Fahril</h1>
-        <p class="cover-date">Sabtu, 14 November 2026</p>
-        <button class="open-button" id="openInvitation" type="button">Buka Undangan <span>✦</span></button>
+        <h1 class="cover-title">Asih <span>&amp;</span> Fahril</h1>
+        <button class="envelope" id="envelopeButton" type="button" aria-label="Ketuk untuk membuka amplop">
+          <span class="envelope-back"></span>
+          <span class="envelope-flap"></span>
+          <span class="wax-seal"><img src="Logo A.png" alt="" /></span>
+        </button>
+        <p class="cover-date">14 November 2026</p>
+        <p class="tap-hint" id="tapHint">Ketuk untuk membuka undangan</p>
+      </div>
+
+      <div class="card-scene" id="cardScene">
+        <div class="card-panel">
+          <div class="card-panel-inner">
+            <p class="eyebrow">The Wedding Of</p>
+            <h1 class="cover-title cover-title--card">Asih &amp; Fahril</h1>
+            <p class="card-date">14 NOVEMBER 2026</p>
+            <div class="hero-divider"><span>✦</span></div>
+            <p class="card-copy">Dengan penuh cinta kami mengundang Anda untuk menjadi bagian dari hari istimewa kami.</p>
+            <button class="open-button" id="openInvitation" type="button">Buka Undangan <span>✦</span></button>
+          </div>
+        </div>
       </div>
     </div>
+
     <audio id="weddingMusic" loop preload="auto">
       <source src="leberch-wedding-piano-595793.mp3" type="audio/mpeg" />
     </audio>
     <button class="music-toggle" id="musicToggle" type="button" aria-label="Matikan musik" aria-pressed="true">
       <span aria-hidden="true">♫</span>
     </button>
+
     <main>
       <section class="hero section-shell" id="beranda">
         <div class="live-ornaments" aria-hidden="true"><i>❀</i><i>✦</i><i>❁</i><i>✦</i></div>
-        <div class="batik batik-top"></div>
         <div class="floral floral-left" aria-hidden="true">❀</div>
         <div class="floral floral-right" aria-hidden="true">❀</div>
         <div class="hero-content">
           <div class="hero-ring" aria-hidden="true"></div>
+          <div class="monogram-badge"><img src="Logo A.png" alt="Monogram Asih dan Fahril" /></div>
           <p class="eyebrow">The Wedding Of</p>
-          <h1>Siti Asih <span>&amp;</span> Fahril</h1>
-          <div class="hero-divider"><span>✦</span></div>
+          <h1>Asih <span>&amp;</span> Fahril</h1>
           <p class="date">Sabtu, 14 November 2026</p>
         </div>
-        <a class="scroll-cue" href="#mempelai" aria-label="Lihat undangan">⌄</a>
+        <a class="scroll-cue" href="#mempelai" aria-label="Geser untuk melihat cerita kami">
+          <span class="scroll-cue-icon">⌄</span>
+          <span class="scroll-cue-text">Geser untuk melihat cerita kami</span>
+        </a>
       </section>
 
       <section class="opening section-shell" id="mempelai">
@@ -52,20 +73,26 @@
         <p class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
         <p class="intro">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
         <p class="copy">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada acara pernikahan kami.</p>
+
+        <p class="eyebrow section-label">Mempelai</p>
+        <div class="couple-frames">
+          <article class="person">
+            <div class="arch-frame" aria-hidden="true"><span>❀</span></div>
+            <p class="role">Asih</p>
+            <p>Putri Bungsu dari</p>
+            <p><strong>Bapak Karnawi (Awi)</strong><br />&amp;<br /><strong>Ibu Ramdah</strong></p>
+          </article>
+          <div class="and">&amp;</div>
+          <article class="person">
+            <div class="arch-frame" aria-hidden="true"><span>✦</span></div>
+            <p class="role">Fahril</p>
+            <p>Putra Bungsu dari</p>
+            <p><strong>Bapak H. Udin Kantin (Alm)</strong><br />&amp;<br /><strong>Ibu Nuryanih</strong></p>
+          </article>
+        </div>
+
         <div class="ornament"><span>❧</span></div>
-        <article class="person">
-          <p class="role">Mempelai Wanita</p>
-          <h2>Siti Asih</h2>
-          <p>Putri Bungsu dari</p>
-          <p><strong>Bapak Karnawi (Awi)</strong><br />&amp;<br /><strong>Ibu Ramdah</strong></p>
-        </article>
-        <div class="and">&amp;</div>
-        <article class="person">
-          <p class="role">Mempelai Pria</p>
-          <h2>Fahril</h2>
-          <p>Putra Bungsu dari</p>
-          <p><strong>Bapak H. Udin Kantin (Alm)</strong><br />&amp;<br /><strong>Ibu Nuryanih</strong></p>
-        </article>
+        <p class="quote">&ldquo;Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu tenteram kepadanya.&rdquo;<br /><em>(QS. Ar-Rum : 21)</em></p>
       </section>
 
       <section class="event-section section-shell" id="acara">
@@ -93,6 +120,7 @@
           <div><b id="minutes">00</b><span>Menit</span></div>
           <div><b id="seconds">00</b><span>Detik</span></div>
         </div>
+        <p class="menuju">Menuju Hari Bahagia Kami</p>
       </section>
 
       <section class="location section-shell" id="lokasi">
@@ -100,10 +128,10 @@
         <p class="eyebrow">Tempat Acara</p>
         <h2>Lokasi</h2>
         <div class="address-card">
-          <div class="map-pin">⌖</div>
+          <div class="venue-photo" aria-hidden="true"><span>❀</span></div>
           <h3>Kediaman Mempelai Wanita</h3>
           <p>Kp. Pisangan Pangsor RT 02/03<br />Desa Sangiang<br />Kec. Sepatan Timur<br />Kab. Tangerang</p>
-          <a class="button" href="https://maps.app.goo.gl/n9aQ3E3HSSGz3oMX7" target="_blank" rel="noopener noreferrer">Buka Google Maps <span>↗</span></a>
+          <a class="button" href="https://maps.app.goo.gl/n9aQ3E3HSSGz3oMX7" target="_blank" rel="noopener noreferrer">Lihat di Google Maps <span>↗</span></a>
         </div>
       </section>
 
@@ -137,9 +165,10 @@
         <p class="copy">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p>
         <p class="thanks">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p>
         <p class="eyebrow">Kami yang berbahagia</p>
-        <h2>Siti Asih <span>&amp;</span> Fahril</h2>
+        <h2>Asih <span>&amp;</span> Fahril</h2>
       </section>
     </main>
+
     <nav class="bottom-nav" aria-label="Navigasi undangan">
       <a href="#beranda">⌂<span>Beranda</span></a>
       <a href="#mempelai">♡<span>Mempelai</span></a>

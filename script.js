@@ -14,6 +14,9 @@ import { firebaseConfig } from "./firebase-config.js";
 const targetDate = new Date("2026-11-14T09:00:00+07:00").getTime();
 const ids = ["days", "hours", "minutes", "seconds"];
 const cover = document.getElementById("invitationCover");
+const envelopeScene = document.getElementById("envelopeScene");
+const envelopeButton = document.getElementById("envelopeButton");
+const cardScene = document.getElementById("cardScene");
 const openButton = document.getElementById("openInvitation");
 const music = document.getElementById("weddingMusic");
 const musicToggle = document.getElementById("musicToggle");
@@ -39,6 +42,14 @@ updateCountdown();
 setInterval(updateCountdown, 1000);
 
 document.body.classList.add("no-scroll");
+
+envelopeButton.addEventListener("click", () => {
+  envelopeButton.classList.add("is-opened");
+  setTimeout(() => {
+    envelopeScene.classList.add("is-opened");
+    cardScene.classList.add("is-visible");
+  }, 450);
+});
 
 openButton.addEventListener("click", () => {
   cover.classList.add("is-open");
@@ -148,26 +159,3 @@ const revealObserver = new IntersectionObserver((entries, observer) => {
   });
 }, { threshold: 0.12 });
 revealSections.forEach((section) => revealObserver.observe(section));
-
-
-/* NAVBAR ACTIVE FIX */
-const navLinks = document.querySelectorAll('.bottom-nav a');
-const navSections = document.querySelectorAll('section[id]');
-
-function updateActiveNav(){
- let current='';
- navSections.forEach(section=>{
-   const top=section.offsetTop-200;
-   const height=section.offsetHeight;
-   if(window.scrollY>=top && window.scrollY < top+height){
-      current=section.id;
-   }
- });
- navLinks.forEach(link=>{
-   link.classList.toggle('active', link.getAttribute('href') === '#'+current);
- });
-}
-window.addEventListener('scroll', updateActiveNav);
-window.addEventListener('load', updateActiveNav);
-
-// navbar fix
