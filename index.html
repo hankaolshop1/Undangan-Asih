@@ -1,93 +1,30 @@
 <!doctype html>
 <html lang="id">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#28070f" />
-    <meta name="description" content="Undangan pernikahan Asih & Fahri, 14 November 2026" />
-    <title>The Wedding Of Asih & Fahri</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <div class="invitation-cover" id="invitationCover" role="dialog" aria-modal="true" aria-label="Sampul undangan">
-      <div class="petals" aria-hidden="true"></div>
-      <div class="cover-content">
-        <p class="eyebrow">The Wedding Of</p>
-        <h1>Asih <span>&amp;</span> Fahri</h1>
-        <div class="cover-ornament">✦</div>
-        <p class="cover-date">14 · 11 · 2026</p>
-        <div class="envelope" aria-hidden="true">
-          <div class="envelope-card">Asih <span>&amp;</span> Fahri</div>
-          <div class="envelope-flap"></div>
-          <div class="wax-seal">✦</div>
-        </div>
-        <button class="open-button" id="openInvitation" type="button">Ketuk untuk membuka <span>✦</span></button>
-        <p class="cover-hint">Sebuah kisah cinta akan segera dimulai</p>
-      </div>
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="theme-color" content="#2b080d"><title>Wedding of Siti Asih & Fahril</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Great+Vibes&family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="no-scroll">
+  <div class="cover" id="invitationCover" role="dialog" aria-modal="true" aria-label="Sampul undangan">
+    <div class="cover-frame"><p class="kicker">The Wedding of</p><h1>Siti Asih <span>&amp;</span> Fahril</h1>
+      <div class="envelope" aria-hidden="true"><div class="letter"><small>The Wedding of</small><b>A &amp; F</b></div><i class="flap"></i><i class="seal">A&amp;F</i></div>
+      <p class="cover-date">14 November 2026</p><button class="gold-button" id="openInvitation" type="button">Buka Undangan</button>
     </div>
-
-    <audio id="weddingMusic" loop preload="auto">
-      <source src="leberch-wedding-piano-595793.mp3" type="audio/mpeg" />
-    </audio>
-    <button class="music-toggle" id="musicToggle" type="button" aria-label="Putar musik" aria-pressed="false"><span aria-hidden="true">♫</span></button>
-
-    <main>
-      <section class="hero section-shell" id="beranda">
-        <div class="hero-glow"></div>
-        <div class="floral floral-left" aria-hidden="true">✽</div>
-        <div class="floral floral-right" aria-hidden="true">✽</div>
-        <div class="hero-frame">
-          <p class="eyebrow">The Wedding Of</p>
-          <h1>Asih <span>&amp;</span> Fahri</h1>
-          <div class="gold-rule"><i>✦</i></div>
-          <p class="hero-date">Sabtu, 14 November 2026</p>
-          <p class="hero-caption">Dengan penuh rasa syukur, kami mengundang Anda<br />untuk menjadi bagian dari hari bahagia kami.</p>
-        </div>
-        <a class="scroll-cue" href="#mempelai" aria-label="Lihat undangan">⌄</a>
-      </section>
-
-      <section class="welcome section-shell">
-        <p class="arabic">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيم</p>
-        <p class="intro">Assalamu'alaikum Warahmatullahi Wabarakatuh</p>
-        <p class="copy">Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir dan memberikan doa restu pada acara pernikahan kami.</p>
-        <div class="ornament">❧</div>
-        <p class="eyebrow dark">Mempelai</p>
-        <div class="couple-grid" id="mempelai">
-          <article class="person portrait-card"><div class="portrait portrait-bride"><span>A</span></div><p class="role">Mempelai Wanita</p><h2>Siti Asih</h2><p>Putri Bungsu dari<br /><strong>Bapak Karnawi (Awi)</strong><br />&amp;<br /><strong>Ibu Ramdah</strong></p></article>
-          <div class="couple-and">&amp;</div>
-          <article class="person portrait-card"><div class="portrait portrait-groom"><span>F</span></div><p class="role">Mempelai Pria</p><h2>Fahri</h2><p>Putra Bungsu dari<br /><strong>Bapak H. Udin Kantin (Alm)</strong><br />&amp;<br /><strong>Ibu Nuryanih</strong></p></article>
-        </div>
-        <blockquote>“Dan di antara tanda-tanda kebesaran-Nya ialah Dia menciptakan pasangan-pasangan untukmu agar kamu merasa tenteram kepadanya.”<cite>QS. Ar-Rum : 21</cite></blockquote>
-      </section>
-
-      <section class="event-section section-shell" id="acara">
-        <p class="eyebrow">Save The Date</p><h2>Rangkaian Acara</h2>
-        <div class="event-cards">
-          <article class="event-card"><div class="icon">◌</div><h3>Akad Nikah</h3><p>Sabtu<br /><strong>14 November 2026</strong></p><p class="event-time">10.00 WIB<br />s.d. Selesai</p></article>
-          <article class="event-card"><div class="icon">♧</div><h3>Resepsi</h3><p>Sabtu<br /><strong>14 November 2026</strong></p><p class="event-time">09.00 WIB<br />s.d. Selesai</p></article>
-        </div>
-        <div class="countdown" aria-label="Hitung mundur menuju resepsi"><div><b id="days">00</b><span>Hari</span></div><div><b id="hours">00</b><span>Jam</span></div><div><b id="minutes">00</b><span>Menit</span></div><div><b id="seconds">00</b><span>Detik</span></div></div>
-        <p class="countdown-note">Menuju hari bahagia kami</p>
-      </section>
-
-      <section class="location section-shell" id="lokasi">
-        <p class="eyebrow dark">Where We Celebrate</p><h2>Lokasi</h2>
-        <div class="venue-photo"><div class="lanterns">✦　✦　✦</div><span>KEDIAMAN MEMPELAI<br /><small>WANITA</small></span></div>
-        <div class="address-card"><div class="map-pin">⌖</div><h3>Kediaman Mempelai Wanita</h3><p>Kp. Pisangan Pangsor RT 02/03<br />Desa Sangiang<br />Kec. Sepatan Timur<br />Kab. Tangerang</p><a class="button" href="https://maps.app.goo.gl/n9aQ3E3HSSGz3oMX7" target="_blank" rel="noopener noreferrer">Lihat di Google Maps <span>↗</span></a></div>
-      </section>
-
-      <section class="guestbook section-shell" id="buku-tamu">
-        <p class="eyebrow dark">Your Kind Words</p><h2>Buku Tamu</h2><p class="guestbook-intro">Kirim doa dan konfirmasi kehadiran Anda untuk kedua mempelai.</p>
-        <form class="guestbook-form" id="guestbookForm"><label for="guestName">Nama Anda</label><input id="guestName" name="name" type="text" maxlength="50" autocomplete="name" placeholder="Masukkan nama" required /><label for="attendance">Konfirmasi Kehadiran</label><select id="attendance" name="attendance" required><option value="hadir">InsyaAllah hadir</option><option value="tidak-hadir">Maaf, belum bisa hadir</option></select><label for="guestMessage">Ucapan &amp; Doa</label><textarea id="guestMessage" name="message" maxlength="500" rows="4" placeholder="Tulis ucapan terbaik Anda" required></textarea><button class="button" id="guestbookSubmit" type="submit">Kirim Ucapan <span>✦</span></button><p class="form-status" id="formStatus" role="status" aria-live="polite"></p></form>
-        <div class="guestbook-list" id="guestbookList" aria-live="polite"><p class="guestbook-loading">Memuat ucapan tamu...</p></div>
-      </section>
-
-      <section class="closing section-shell"><div class="floral floral-bottom" aria-hidden="true">✽</div><p class="copy">Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p><p class="thanks">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p><p class="eyebrow">Kami yang berbahagia</p><h2>Asih <span>&amp;</span> Fahri</h2></section>
-    </main>
-    <nav class="bottom-nav" aria-label="Navigasi undangan"><a href="#beranda">⌂<span>Beranda</span></a><a href="#mempelai">♡<span>Mempelai</span></a><a href="#acara">✦<span>Acara</span></a><a href="#lokasi">⌖<span>Lokasi</span></a><a href="#buku-tamu">✎<span>Buku Tamu</span></a></nav>
-    <script type="module" src="script.js"></script>
-  </body>
+  </div>
+  <audio id="weddingMusic" loop preload="auto"><source src="leberch-wedding-piano-595793.mp3" type="audio/mpeg"></audio>
+  <button class="music-toggle" id="musicToggle" type="button" aria-label="Matikan musik" aria-pressed="true">♫</button>
+  <main>
+    <section class="hero" id="beranda"><div class="flora left"></div><div class="flora right"></div><article class="paper-card"><p class="kicker">The Wedding of</p><h2>Siti Asih <span>&amp;</span> Fahril</h2><div class="divider"></div><p>Sabtu, 14 November 2026</p><p class="hero-copy">Dengan penuh rasa syukur, kami mengundang Anda untuk menjadi bagian dari hari istimewa kami.</p><a class="gold-button" href="#mempelai">Lihat Undangan</a></article></section>
+    <section class="section" id="mempelai"><div class="flora left"></div><div class="flora right"></div><p class="kicker">Mempelai</p><h2 class="title">Dengan penuh cinta</h2><p class="intro">Bismillahirrahmanirrahim. Dengan memohon rahmat dan ridho Allah SWT, kami mengundang Bapak/Ibu/Saudara/i untuk hadir pada pernikahan kami.</p><div class="couples"><article><i>◌</i><p class="role">Mempelai Wanita</p><h3>Siti Asih</h3><p>Putri Bungsu dari<br><strong>Bapak Karnawi (Awi)</strong><br>&amp;<br><strong>Ibu Ramdah</strong></p></article><b>&amp;</b><article><i>◌</i><p class="role">Mempelai Pria</p><h3>Fahril</h3><p>Putra Bungsu dari<br><strong>Bapak H. Udin Kantin (Alm)</strong><br>&amp;<br><strong>Ibu Nuryanih</strong></p></article></div><blockquote>“Dan di antara tanda-tanda (kebesaran)-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri.”<cite>QS. Ar-Rum: 21</cite></blockquote></section>
+    <section class="section" id="acara"><div class="flora left"></div><div class="flora right"></div><p class="kicker">Save the Date</p><h2 class="title">Rangkaian Acara</h2><div class="events"><article><i>◯</i><h3>Akad Nikah</h3><p>Sabtu<br><strong>14 November 2026</strong><br>10.00 WIB<br>s.d. Selesai</p></article><article><i>◇</i><h3>Resepsi</h3><p>Sabtu<br><strong>14 November 2026</strong><br>09.00 WIB<br>s.d. Selesai</p></article></div><div class="countdown"><div><b id="days">00</b><span>Hari</span></div><div><b id="hours">00</b><span>Jam</span></div><div><b id="minutes">00</b><span>Menit</span></div><div><b id="seconds">00</b><span>Detik</span></div></div></section>
+    <section class="section" id="lokasi"><div class="flora left"></div><div class="flora right"></div><p class="kicker">Tempat Acara</p><h2 class="title">Lokasi</h2><div class="venue" aria-hidden="true"><i></i><i></i><i></i></div><h3 class="venue-title">Kediaman Mempelai Wanita</h3><p class="address">Kp. Pisangan Pangsor RT 02/03<br>Desa Sangiang<br>Kec. Sepatan Timur, Kab. Tangerang</p><a class="gold-button" href="https://maps.app.goo.gl/n9aQ3E3HSSGz3oMX7" target="_blank" rel="noopener noreferrer">Lihat di Google Maps</a></section>
+    <section class="section" id="buku-tamu"><div class="flora left"></div><div class="flora right"></div><p class="kicker">Wedding Guestbook</p><h2 class="title">Buku Tamu</h2><p class="intro">Kirimkan doa terbaik dan konfirmasi kehadiran Anda.</p><form class="guestbook-form" id="guestbookForm"><label for="guestName">Nama Anda</label><input id="guestName" name="name" maxlength="50" autocomplete="name" placeholder="Masukkan nama" required><label for="attendance">Konfirmasi Kehadiran</label><select id="attendance" name="attendance"><option value="hadir">InsyaAllah hadir</option><option value="tidak-hadir">Maaf, belum bisa hadir</option></select><label for="guestMessage">Ucapan &amp; Doa</label><textarea id="guestMessage" name="message" maxlength="500" rows="4" placeholder="Tulis ucapan terbaik Anda" required></textarea><button class="gold-button" id="guestbookSubmit" type="submit">Kirim Ucapan</button><p class="form-status" id="formStatus" role="status"></p></form><div class="guestbook-list" id="guestbookList"><p class="guestbook-loading">Memuat ucapan tamu...</p></div></section>
+    <section class="closing"><div class="flora right"></div><p class="kicker">Kami yang berbahagia</p><h2>Siti Asih <span>&amp;</span> Fahril</h2><p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir dan memberikan doa restu.</p><p class="thanks">Wassalamu'alaikum Warahmatullahi Wabarakatuh</p></section>
+  </main>
+  <nav class="bottom-nav"><a href="#beranda">⌂<span>Beranda</span></a><a href="#mempelai">♡<span>Mempelai</span></a><a href="#acara">◇<span>Acara</span></a><a href="#lokasi">⌖<span>Lokasi</span></a><a href="#buku-tamu">▤<span>Buku Tamu</span></a></nav>
+  <script type="module" src="script.js"></script>
+</body>
 </html>
