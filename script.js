@@ -60,6 +60,14 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 document.querySelectorAll(".reveal-section").forEach((section) => revealObserver.observe(section));
 
+// Safety fallback: if observer hasn't fired within 2s (some embedded previews / older browsers),
+// force-reveal all sections so the page never stays blank.
+setTimeout(() => {
+  document.querySelectorAll(".reveal-section:not(.is-visible)").forEach((section) => {
+    section.classList.add("is-visible");
+  });
+}, 2000);
+
 function updateCountdown() {
   const remaining = Math.max(0, targetDate - Date.now());
   const units = [
@@ -105,6 +113,31 @@ musicToggle.addEventListener("click", () => {
     musicToggle.setAttribute("aria-pressed", "false");
     musicToggle.classList.add("is-muted");
   }
+});
+
+/* ============================================================
+   Transfer Dana — copy-to-clipboard for account numbers
+   ============================================================ */
+document.querySelectorAll(".gift-copy").forEach((button) => {
+  button.addEventListener("click", async () => {
+    const value = button.dataset.copy || "";
+    if (!value) return;
+    try {
+      await navigator.clipboard.writeText(value);
+      const original = button.textContent;
+      button.textContent = "Tersalin ✓";
+      button.classList.add("is-copied");
+      setTimeout(() => {
+        button.textContent = original;
+        button.classList.remove("is-copied");
+      }, 1800);
+    } catch {
+      button.textContent = "Gagal menyalin";
+      setTimeout(() => {
+        button.textContent = "Salin Nomor";
+      }, 1800);
+    }
+  });
 });
 
 const hasFirebaseConfig = !Object.values(firebaseConfig).some((value) => value.includes("GANTI_DENGAN"));
