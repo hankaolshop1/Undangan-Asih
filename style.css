@@ -846,3 +846,897 @@ main{
   }
   .reveal-section{opacity:1;transform:none}
 }
+
+/* ============================================================
+   PREMIUM EDITORIAL OVERRIDE
+   A quieter luxury palette with ink, ivory and champagne-gold.
+   ============================================================ */
+:root{
+  --blue-deep:#1e2730;
+  --blue-mid:#66747c;
+  --blue-soft:#b9c2c0;
+  --blue-wash-1:#f8f4ed;
+  --blue-wash-2:#eee7dc;
+  --blue-wash-3:#ded4c5;
+  --pink:#b98482;
+  --pink-soft:#ead5d0;
+  --gold:#b38a4c;
+  --gold-light:#dfc28c;
+  --paper:#fcfaf6;
+  --paper-warm:#f5efe5;
+  --ink:#30383b;
+  --muted:#737b7a;
+}
+
+body{
+  background:
+    radial-gradient(circle at 50% 0%,#f7f1e8 0,#d8d0c4 54%,#b8b1a8 100%);
+  color:var(--ink);
+}
+main{
+  background:
+    linear-gradient(180deg,var(--paper) 0%,#f7f1e8 42%,var(--paper) 100%);
+  box-shadow:0 0 80px rgba(30,39,48,.23);
+}
+.invitation-cover{
+  background:
+    linear-gradient(180deg,rgba(248,244,237,.65),rgba(221,211,198,.7)),
+    radial-gradient(circle at 50% 28%,#fffdf8 0,#e9dfd2 56%,#bdb4a9 100%);
+}
+.invitation-cover:before{
+  opacity:.25;
+  background-image:radial-gradient(rgba(179,138,76,.36) .8px,transparent .8px);
+}
+.cover-content{
+  min-height:680px;
+  border-radius:220px 220px 8px 8px;
+  background:
+    linear-gradient(180deg,rgba(255,253,248,.88),rgba(247,239,228,.62));
+  box-shadow:
+    inset 0 0 0 8px rgba(255,255,255,.32),
+    0 30px 70px rgba(30,39,48,.28);
+}
+.cover-content:before,.cover-content:after,
+.floral,.flower-frame,.section-shell:after,.hero-garden:before{
+  filter:saturate(.55) sepia(.16) hue-rotate(330deg);
+}
+.cover-content h1,.hero h1{
+  color:var(--blue-deep);
+  text-shadow:0 3px 14px rgba(255,255,255,.85);
+}
+.cover-content h1 span,.hero h1 span{color:var(--gold)}
+.envelope{
+  background:linear-gradient(140deg,#f7f0e5,#d8cabb);
+  box-shadow:0 18px 34px rgba(30,39,48,.22);
+}
+.envelope:before{background:#e7dacb}
+.envelope:after{background:#d3c2b1}
+.envelope-flap{background:linear-gradient(145deg,#f4ebdf,#cfbda9)}
+.envelope-card{background:#fffdf8;color:var(--blue-deep)}
+.wax-seal{
+  background:radial-gradient(circle,#d9b876,#92703c);
+  box-shadow:0 4px 12px rgba(30,39,48,.28);
+}
+.open-button{
+  background:linear-gradient(180deg,#e2c58f,#b38a4c);
+  color:#fffaf1;
+  box-shadow:0 10px 24px rgba(179,138,76,.3);
+}
+.petal{background:linear-gradient(140deg,#ead3cc,#b98482)}
+.music-toggle{
+  background:rgba(252,250,246,.94);
+  box-shadow:0 7px 18px rgba(30,39,48,.18);
+}
+.section-shell{
+  padding:96px 28px;
+  background:
+    linear-gradient(180deg,var(--paper) 0%,#f4ede3 48%,var(--paper) 100%);
+}
+.section-shell:before{
+  inset:18px;
+  border-color:rgba(179,138,76,.42);
+  border-radius:4px;
+  box-shadow:inset 0 0 34px rgba(179,138,76,.055);
+}
+.hero{
+  background:
+    radial-gradient(circle at 50% 33%,rgba(255,255,255,.95),rgba(248,244,237,.7) 54%,rgba(224,214,202,.7));
+}
+.hero-glow{background:rgba(223,194,140,.2)}
+.hero-frame{padding-top:48px}
+.gold-rule{width:200px;margin:30px auto 19px}
+.gold-rule i{background:var(--paper)}
+.hero-date{color:var(--blue-deep);letter-spacing:.24em}
+.hero-caption{color:var(--muted);letter-spacing:.02em}
+.scroll-cue span{background:rgba(255,253,248,.75)}
+.welcome{
+  background:linear-gradient(180deg,#fffdf9 0%,#f1e9de 100%);
+}
+.arabic{color:var(--blue-deep)}
+.intro{color:var(--gold)}
+.copy{color:var(--ink)}
+.portrait{
+  border-radius:70px 70px 6px 6px;
+  background:linear-gradient(180deg,#f2ebe1,#d4c8b8);
+  box-shadow:inset 0 0 0 5px rgba(255,255,255,.48),0 13px 28px rgba(30,39,48,.16);
+}
+.portrait-bride{background:radial-gradient(circle at 50% 29%,#ead1cc 0 13%,transparent 14%),linear-gradient(180deg,#f6eee5,#d7c3b9)}
+.portrait-groom{background:radial-gradient(circle at 50% 29%,#d6cec2 0 13%,transparent 14%),linear-gradient(180deg,#e8e2d8,#b8b0a6)}
+.person h2,.event-section h2,.location h2,.guestbook h2,.closing h2,.gift-section h2,
+.event-card h3,.address-card h3{color:var(--blue-deep)}
+.event-section,.gift-section{
+  background:linear-gradient(180deg,#eee5d9 0%,#fffdf9 58%,#f3ece2 100%);
+}
+.event-card,.gift-card,.guestbook-form,.address-card{
+  border-radius:4px;
+  border-color:rgba(179,138,76,.62);
+  background:rgba(255,253,249,.94);
+  box-shadow:7px 8px 0 rgba(179,138,76,.11),0 14px 30px rgba(30,39,48,.07);
+}
+.event-card:hover,.gift-card:hover{box-shadow:7px 13px 0 rgba(179,138,76,.14),0 18px 34px rgba(30,39,48,.1)}
+.countdown div{
+  border-radius:4px;
+  background:rgba(255,253,249,.82);
+  box-shadow:0 7px 16px rgba(30,39,48,.07);
+}
+.venue-photo{
+  border-radius:4px;
+  outline:7px solid rgba(179,138,76,.12);
+  background:
+    linear-gradient(180deg,rgba(30,39,48,.45),rgba(30,39,48,.8)),
+    url("assets/floral-bouquet.png") center/70% no-repeat,
+    linear-gradient(135deg,#65716f,#1e2730);
+}
+.address-card{box-shadow:7px 8px 0 rgba(179,138,76,.12)}
+.button{
+  border-radius:3px;
+  background:linear-gradient(180deg,#303d43,#1e2730);
+  box-shadow:0 9px 20px rgba(30,39,48,.26);
+}
+.gift-logo{
+  border-radius:4px;
+  background:linear-gradient(160deg,#eee4d6,#cfc0ae);
+}
+.gift-logo.bca{background:linear-gradient(160deg,#d7e2e8,#9fafb6)}
+.gift-logo.mandiri{background:linear-gradient(160deg,#ead8d0,#c49b8b)}
+.gift-logo.dana{background:linear-gradient(160deg,#d7e2e8,#aebdc0)}
+.guestbook{
+  background:linear-gradient(180deg,#f8f2e9 0%,#fffdf9 55%,#ece4d8 100%);
+}
+.guestbook-form input,.guestbook-form select,.guestbook-form textarea{
+  border-radius:3px;
+  background:#fffdf9;
+  border-color:rgba(179,138,76,.48);
+}
+.guest-message{
+  border-radius:4px;
+  background:rgba(255,253,249,.9);
+  box-shadow:0 5px 12px rgba(30,39,48,.06);
+}
+.closing{
+  background:linear-gradient(180deg,#e8ded0 0%,#fffdf9 55%,#d6c8b8 100%);
+}
+.bottom-nav{
+  border-radius:4px;
+  background:rgba(255,253,249,.95);
+  box-shadow:0 10px 28px rgba(30,39,48,.2);
+}
+.bottom-nav a{color:var(--blue-deep)}
+.bottom-nav span{color:var(--muted)}
+.section-sparkles i{color:var(--gold)}
+@media(max-width:420px){
+  .section-shell{padding:78px 22px}
+  .hero-frame{padding-top:28px}
+}
+
+/* ============================================================
+   BLUE EDITORIAL FINISH
+   Navy, dusty blue and champagne gold — the original character,
+   refined with the supplied envelope artwork.
+   ============================================================ */
+:root{
+  --blue-deep:#203b5c;
+  --blue-mid:#5f7fa3;
+  --blue-soft:#a9c1d9;
+  --blue-wash-1:#edf4fb;
+  --blue-wash-2:#dce9f5;
+  --blue-wash-3:#c3d7ea;
+  --pink:#d6aeb7;
+  --pink-soft:#f1dce0;
+  --gold:#c9a05a;
+  --gold-light:#e6c78d;
+  --paper:#fbfcfe;
+  --paper-warm:#fbf6ee;
+  --ink:#2d3c50;
+  --muted:#718197;
+}
+
+body{
+  background:
+    radial-gradient(circle at 50% 0%,#eef5fb 0,#c7d9eb 56%,#99b2cd 100%);
+}
+main{
+  background:linear-gradient(180deg,var(--blue-wash-1) 0%,var(--paper) 42%,var(--blue-wash-1) 100%);
+}
+.invitation-cover{
+  background:
+    linear-gradient(180deg,rgba(234,242,251,.42),rgba(191,211,232,.72)),
+    radial-gradient(circle at 50% 26%,#f8fbff 0,#c9dcef 55%,#9fb9d3 100%);
+}
+.invitation-cover:before{
+  background-image:radial-gradient(rgba(107,138,176,.35) 1px,transparent 1px);
+}
+.cover-content{
+  background:linear-gradient(180deg,rgba(255,255,255,.72),rgba(238,246,253,.48));
+  box-shadow:inset 0 0 0 8px rgba(255,255,255,.35),0 25px 60px rgba(32,59,92,.3);
+}
+.cover-content:before,.cover-content:after{
+  filter:none;
+}
+.cover-content h1,.hero h1{color:var(--blue-deep)}
+.envelope{
+  width:min(100%,340px);
+  height:227px;
+  margin:22px 0 28px;
+  border:0;
+  background:url("assets/navy-gold-envelope.png") center/cover no-repeat;
+  box-shadow:0 18px 38px rgba(25,43,67,.36);
+  transform:perspective(900px) rotateX(2deg);
+  overflow:visible;
+}
+.envelope:before,.envelope:after,.envelope-flap,.envelope-card,.wax-seal{display:none}
+.open-button{
+  background:linear-gradient(180deg,#e6c78d,#c9a05a);
+  color:var(--blue-deep);
+}
+.section-shell{
+  background:linear-gradient(180deg,var(--blue-wash-1) 0%,var(--paper) 48%,var(--blue-wash-2) 100%);
+}
+.section-shell:before{
+  border-color:rgba(201,160,90,.45);
+  border-radius:18px;
+  box-shadow:inset 0 0 30px rgba(107,138,176,.08);
+}
+.hero{
+  background:radial-gradient(circle at 50% 34%,rgba(255,255,255,.82),rgba(234,242,251,.56) 55%,rgba(207,224,240,.7));
+}
+.hero-glow{background:rgba(230,199,141,.25)}
+.welcome{background:linear-gradient(180deg,var(--paper) 0%,var(--blue-wash-1) 100%)}
+.event-section,.gift-section{background:linear-gradient(180deg,var(--blue-wash-2) 0%,var(--paper) 60%,var(--blue-wash-1) 100%)}
+.location{background:linear-gradient(180deg,var(--blue-wash-1) 0%,var(--paper) 55%,var(--blue-wash-2) 100%)}
+.guestbook{background:linear-gradient(180deg,var(--blue-wash-1) 0%,var(--paper) 55%,var(--blue-wash-2) 100%)}
+.closing{background:linear-gradient(180deg,var(--blue-wash-2) 0%,var(--paper) 55%,var(--blue-wash-3) 100%)}
+.event-card,.gift-card,.guestbook-form,.address-card{
+  border-radius:14px;
+  background:rgba(255,255,255,.95);
+  box-shadow:6px 6px 0 rgba(107,138,176,.16);
+}
+.portrait{
+  box-shadow:inset 0 0 0 5px rgba(255,255,255,.5),0 10px 24px rgba(61,90,128,.18);
+}
+.venue-photo{
+  background:
+    linear-gradient(180deg,rgba(61,90,128,.55),rgba(45,72,110,.75)),
+    url("assets/floral-bouquet.png") center/70% no-repeat,
+    linear-gradient(135deg,#6b8ab0,#3d5a80);
+}
+.button{background:linear-gradient(180deg,var(--blue-deep),#2c4364)}
+.bottom-nav{
+  background:rgba(255,255,255,.94);
+  box-shadow:0 8px 24px rgba(61,90,128,.25);
+}
+
+/* A single authored motion language for the floral artwork. */
+.cover-content{
+  animation:rise .9s both, envelopeFloat 7s ease-in-out 1s infinite;
+}
+.floral-left,.floral-right,.floral-bottom,
+.flower-frame-top-left,.flower-frame-top-right,
+.flower-frame-bottom-left,.flower-frame-bottom-right{
+  animation:floralSway 6s ease-in-out infinite;
+  transform-origin:bottom center;
+}
+.floral-right,.flower-frame-top-right,.flower-frame-bottom-right{animation-delay:-2.6s}
+.floral-bottom{animation-delay:-4.2s}
+.hero-garden:before{
+  animation:bouquetSway 8s ease-in-out infinite;
+  transform-origin:50% 100%;
+}
+@keyframes envelopeFloat{
+  0%,100%{transform:translateY(0) perspective(900px) rotateX(2deg)}
+  50%{transform:translateY(-5px) perspective(900px) rotateX(2deg)}
+}
+@keyframes floralSway{
+  0%,100%{transform:rotate(-1.5deg) translateY(0)}
+  50%{transform:rotate(1.8deg) translateY(-4px)}
+}
+@keyframes bouquetSway{
+  0%,100%{transform:translateX(-50%) rotate(-1deg) scale(1)}
+  50%{transform:translateX(-50%) rotate(1.4deg) scale(1.02)}
+}
+@media(prefers-reduced-motion:reduce){
+  .cover-content,.floral-left,.floral-right,.floral-bottom,
+  .flower-frame-top-left,.flower-frame-top-right,
+  .flower-frame-bottom-left,.flower-frame-bottom-right,
+  .hero-garden:before{animation:none!important}
+}
+
+/* ============================================================
+   READABILITY + REFINED ORIGINAL ENVELOPE
+   ============================================================ */
+.cover-content{
+  color:#183452;
+}
+.cover-content h1{
+  color:#183452;
+  text-shadow:0 2px 0 rgba(255,255,255,.8),0 4px 12px rgba(26,52,82,.16);
+}
+.cover-content h1 span{
+  color:#a9782f;
+  text-shadow:0 1px 0 rgba(255,255,255,.65);
+}
+.cover-date{
+  color:#294b70;
+  font-weight:700;
+  text-shadow:0 1px 0 rgba(255,255,255,.7);
+}
+.cover-hint{
+  color:#536b86;
+  text-shadow:0 1px 0 rgba(255,255,255,.8);
+}
+.eyebrow{
+  color:#9a6b29;
+  text-shadow:0 1px 0 rgba(255,255,255,.7);
+}
+.eyebrow.dark{
+  color:#234668;
+}
+
+/* Return to the tactile envelope composition, with richer navy paper. */
+.envelope{
+  width:250px;
+  height:155px;
+  margin:20px 0 25px;
+  border:1px solid #c9a05a;
+  background:
+    radial-gradient(circle at 18% 18%,rgba(111,147,188,.28),transparent 25%),
+    linear-gradient(140deg,#24466d,#122945 72%,#0d2038);
+  box-shadow:
+    0 18px 34px rgba(21,45,73,.34),
+    inset 0 1px 0 rgba(255,255,255,.14),
+    inset 0 -12px 24px rgba(4,15,29,.18);
+  transform:perspective(700px) rotateX(3deg);
+  overflow:visible;
+}
+.envelope:before,.envelope:after{
+  display:block;
+}
+.envelope:before{
+  background:linear-gradient(145deg,#1d3c60,#183554);
+  border-top-color:rgba(230,199,141,.55);
+}
+.envelope:after{
+  background:linear-gradient(225deg,#183554,#102945);
+  border-top-color:rgba(230,199,141,.45);
+}
+.envelope-flap{
+  display:block;
+  background:
+    linear-gradient(145deg,rgba(83,126,168,.3),transparent 34%),
+    linear-gradient(145deg,#2a4e78,#163250 74%,#112842);
+  border-bottom-color:#d7b56e;
+  box-shadow:inset 0 -1px 0 rgba(255,255,255,.1);
+}
+.envelope-card{
+  display:block;
+  color:#193959;
+  box-shadow:0 4px 12px rgba(8,25,45,.18);
+}
+.wax-seal{
+  display:grid;
+}
+.open-button{
+  color:#173655;
+  text-shadow:0 1px 0 rgba(255,255,255,.25);
+}
+
+.hero-date{
+  color:#234668;
+  font-weight:700;
+  text-shadow:0 1px 0 rgba(255,255,255,.75);
+}
+.hero-caption{
+  color:#526b86;
+  font-weight:500;
+  text-shadow:0 1px 0 rgba(255,255,255,.85);
+}
+.scroll-cue small{
+  color:#536b86;
+  text-shadow:0 1px 0 rgba(255,255,255,.8);
+}
+.copy,.intro,.person p:not(.role),.event-card p,.gift-intro,.guestbook-intro{
+  color:#30465d;
+}
+.person h2,.event-section h2,.location h2,.guestbook h2,.gift-section h2,
+.closing h2,.event-card h3,.address-card h3{
+  color:#1f4165;
+  text-shadow:0 1px 0 rgba(255,255,255,.7);
+}
+.role,.gift-bank,.event-time,.countdown span{
+  color:#9a6b29;
+}
+.countdown b,.gift-number,.guest-message strong{
+  color:#1f4165;
+}
+.countdown-note,.gift-note,.guestbook-loading,.guest-message time{
+  color:#5f7186;
+}
+.gift-name{
+  color:#5f7186;
+}
+.guestbook-form label{
+  color:#234668;
+}
+.bottom-nav span{
+  color:#566d84;
+}
+.bottom-nav a,.nav-icon{
+  color:#234668;
+}
+.welcome blockquote{
+  color:#4b6177;
+}
+.welcome cite{
+  color:#9a6b29;
+}
+
+/* Strong contrast where the hero artwork is brightest. */
+.hero-frame{
+  isolation:isolate;
+}
+.hero-frame:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:8px -30px -18px;
+  border:1px solid rgba(201,160,90,.25);
+  border-radius:6px;
+  background:rgba(251,252,254,.72);
+  box-shadow:0 12px 28px rgba(32,59,92,.08);
+}
+.hero-frame .eyebrow,
+.hero-frame h1,
+.hero-frame .gold-rule,
+.hero-frame .hero-date,
+.hero-frame .hero-caption{
+  position:relative;
+  z-index:1;
+}
+.hero-frame .eyebrow{
+  color:#7d531d;
+  font-weight:700;
+}
+.hero-frame h1{
+  color:#122f50;
+  text-shadow:0 2px 0 #fff,0 3px 10px rgba(18,47,80,.22);
+}
+.hero-frame .hero-date{
+  color:#163e66;
+  font-size:.84rem;
+  font-weight:800;
+  letter-spacing:.2em;
+  text-shadow:0 1px 0 #fff;
+}
+.hero-frame .hero-caption{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:4px;
+  background:rgba(251,252,254,.86);
+  color:#254968;
+  font-size:1.28rem;
+  font-weight:600;
+  text-shadow:0 1px 0 #fff;
+}
+.scroll-cue{
+  padding:7px 14px;
+  border-radius:5px;
+  background:rgba(251,252,254,.9);
+  box-shadow:0 5px 14px rgba(32,59,92,.1);
+}
+.scroll-cue small{
+  color:#365979;
+  font-weight:600;
+}
+.scroll-cue b{
+  color:#173b60;
+}
+.section-shell > .copy,
+.section-shell > .intro,
+.section-shell > .gift-intro,
+.section-shell > .guestbook-intro,
+.section-shell > .countdown-note,
+.section-shell > .gift-note{
+  text-shadow:0 1px 0 rgba(255,255,255,.9);
+}
+@media(max-width:420px){
+  .hero-frame:before{inset:8px -14px -18px}
+  .hero-frame .hero-caption{font-size:1.16rem;padding-inline:11px}
+}
+
+/* ============================================================
+   LIVING WEDDING ORNAMENTS
+   Each information section gets one quiet, premium motion motif.
+   ============================================================ */
+.section-mempelai:after,
+.section-acara:after,
+.section-lokasi:after,
+.section-transfer:after{
+  z-index:0;
+  opacity:1;
+  background:none;
+  pointer-events:none;
+}
+.section-mempelai:after{
+  content:"✦  ❧  ✦";
+  right:18px;
+  bottom:30px;
+  width:auto;
+  height:auto;
+  color:rgba(179,138,76,.34);
+  font-family:"Cormorant Garamond",serif;
+  font-size:2.2rem;
+  letter-spacing:.3em;
+  transform:rotate(-14deg);
+  animation:ornamentDrift 7s ease-in-out infinite;
+}
+.section-mempelai:before{
+  background:
+    radial-gradient(circle at 13% 18%,rgba(201,160,90,.34) 0 2px,transparent 2.5px),
+    radial-gradient(circle at 18% 23%,rgba(95,127,163,.32) 0 1.5px,transparent 2px),
+    radial-gradient(circle at 88% 72%,rgba(201,160,90,.28) 0 2px,transparent 2.5px),
+    radial-gradient(circle at 84% 77%,rgba(95,127,163,.26) 0 1.5px,transparent 2px),
+    linear-gradient(180deg,transparent,transparent);
+  animation:softSparkle 4.8s ease-in-out infinite;
+}
+.section-acara:after{
+  content:"";
+  right:24px;
+  top:28px;
+  width:78px;
+  height:78px;
+  border:1px solid rgba(179,138,76,.36);
+  border-radius:50%;
+  box-shadow:
+    0 0 0 8px rgba(179,138,76,.07),
+    0 0 0 16px rgba(179,138,76,.04);
+  animation:ringOrbit 9s linear infinite;
+}
+.section-acara:before{
+  background:
+    radial-gradient(circle at 14% 76%,rgba(201,160,90,.34) 0 2px,transparent 2.5px),
+    radial-gradient(circle at 21% 81%,rgba(201,160,90,.22) 0 1px,transparent 1.5px),
+    linear-gradient(180deg,transparent,transparent);
+  animation:softSparkle 5.2s ease-in-out -1.4s infinite;
+}
+.section-lokasi:after{
+  content:"";
+  right:30px;
+  top:32px;
+  width:34px;
+  height:48px;
+  border:1px solid rgba(179,138,76,.4);
+  border-radius:50% 50% 42% 42%;
+  box-shadow:
+    inset 0 -10px 12px rgba(201,160,90,.12),
+    0 0 0 7px rgba(179,138,76,.045);
+  animation:lanternFloat 5.5s ease-in-out infinite;
+}
+.section-lokasi:before{
+  background:
+    radial-gradient(ellipse at 87% 22%,rgba(230,199,141,.42) 0 4px,rgba(230,199,141,.12) 5px,transparent 19px),
+    radial-gradient(circle at 82% 18%,rgba(201,160,90,.28) 0 1.5px,transparent 2px),
+    linear-gradient(180deg,transparent,transparent);
+  animation:lanternGlow 4s ease-in-out infinite;
+}
+.section-transfer:after{
+  content:"✦";
+  right:34px;
+  top:31px;
+  width:auto;
+  height:auto;
+  color:rgba(179,138,76,.45);
+  font-size:2.8rem;
+  text-shadow:
+    38px 42px 0 rgba(179,138,76,.24),
+    -22px 82px 0 rgba(95,127,163,.24),
+    -54px 26px 0 rgba(179,138,76,.18);
+  animation:goldDust 6s ease-in-out infinite;
+}
+.section-transfer:before{
+  background:
+    radial-gradient(circle at 16% 20%,rgba(201,160,90,.25) 0 2px,transparent 2.5px),
+    radial-gradient(circle at 23% 27%,rgba(95,127,163,.22) 0 1px,transparent 1.5px),
+    radial-gradient(circle at 82% 87%,rgba(201,160,90,.25) 0 2px,transparent 2.5px),
+    linear-gradient(180deg,transparent,transparent);
+  animation:softSparkle 5.8s ease-in-out -2s infinite;
+}
+.section-mempelai > *,
+.section-acara > *,
+.section-lokasi > *,
+.section-transfer > *{
+  position:relative;
+  z-index:1;
+}
+@keyframes ornamentDrift{
+  0%,100%{transform:rotate(-14deg) translate3d(0,0,0);opacity:.62}
+  50%{transform:rotate(-9deg) translate3d(-7px,-7px,0);opacity:1}
+}
+@keyframes softSparkle{
+  0%,100%{opacity:.38}
+  50%{opacity:.95}
+}
+@keyframes ringOrbit{
+  0%{transform:rotate(0deg) scale(1)}
+  50%{transform:rotate(180deg) scale(1.05)}
+  100%{transform:rotate(360deg) scale(1)}
+}
+@keyframes lanternFloat{
+  0%,100%{transform:translateY(0) rotate(-2deg);filter:brightness(1)}
+  50%{transform:translateY(-8px) rotate(2deg);filter:brightness(1.2)}
+}
+@keyframes lanternGlow{
+  0%,100%{opacity:.42}
+  50%{opacity:.95}
+}
+@keyframes goldDust{
+  0%,100%{transform:translate(0,0) rotate(0deg);opacity:.52}
+  50%{transform:translate(-7px,8px) rotate(14deg);opacity:1}
+}
+@media(max-width:420px){
+  .section-acara:after{right:16px;top:24px;width:58px;height:58px}
+  .section-lokasi:after{right:18px;top:26px;transform:scale(.82)}
+  .section-transfer:after{right:22px;top:26px;transform:scale(.8)}
+}
+@media(prefers-reduced-motion:reduce){
+  .section-mempelai:after,.section-mempelai:before,
+  .section-acara:after,.section-acara:before,
+  .section-lokasi:after,.section-lokasi:before,
+  .section-transfer:after,.section-transfer:before{
+    animation:none!important;
+  }
+}
+
+/* Hero scene: a candlelit wedding aisle with a calm navy veil for type. */
+.hero{
+  background:
+    linear-gradient(180deg,rgba(12,29,49,.48),rgba(20,42,65,.62)),
+    url("assets/wedding-path.png") center center/cover no-repeat;
+  color:#fffaf1;
+}
+.hero:after{
+  content:"";
+  position:absolute;
+  z-index:0;
+  inset:0;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(7,20,36,.32),transparent 28%,transparent 72%,rgba(7,20,36,.34)),
+    linear-gradient(0deg,rgba(7,20,36,.42),transparent 30%,rgba(7,20,36,.16));
+}
+.hero .hero-glow{
+  z-index:1;
+  background:radial-gradient(circle,rgba(255,219,145,.28),transparent 68%);
+  mix-blend-mode:screen;
+}
+.hero .hero-frame{
+  z-index:3;
+}
+.hero-frame:before{
+  border-color:rgba(230,199,141,.5);
+  background:rgba(10,30,51,.64);
+  box-shadow:0 15px 30px rgba(4,14,26,.24),inset 0 0 0 1px rgba(255,255,255,.08);
+}
+.hero-frame .eyebrow{
+  color:#f0d69d;
+  text-shadow:0 2px 4px rgba(0,0,0,.48);
+}
+.hero-frame h1{
+  color:#fff9ee;
+  text-shadow:0 2px 0 rgba(18,47,80,.55),0 4px 14px rgba(0,0,0,.55);
+}
+.hero-frame h1 span{
+  color:#f0c979;
+}
+.hero-frame .gold-rule{
+  border-color:#e2ba68;
+}
+.hero-frame .gold-rule i{
+  background:transparent;
+  color:#f0c979;
+  text-shadow:0 2px 5px rgba(0,0,0,.5);
+}
+.hero-frame .hero-date{
+  color:#fff7e8;
+  text-shadow:0 2px 5px rgba(0,0,0,.5);
+}
+.hero-frame .hero-caption{
+  color:#fff4dc;
+  background:rgba(8,25,44,.62);
+  border:1px solid rgba(230,199,141,.28);
+  text-shadow:0 2px 5px rgba(0,0,0,.5);
+}
+.hero .floral-left,.hero .floral-right,
+.hero .flower-frame,.hero .hero-garden:before{
+  opacity:.18;
+}
+.hero .scroll-cue{
+  z-index:3;
+  color:#fff7e8;
+  background:rgba(8,25,44,.72);
+  border:1px solid rgba(230,199,141,.34);
+}
+.hero .scroll-cue small{
+  color:#fff1d4;
+  text-shadow:0 2px 4px rgba(0,0,0,.5);
+}
+.hero .scroll-cue span{
+  background:rgba(8,25,44,.5);
+  color:#f0c979;
+}
+.hero .scroll-cue b{
+  color:#f0c979;
+}
+@media(max-width:420px){
+  .hero{
+    background-position:center center;
+  }
+}
+
+/* Restore the original airy hero; let the florals carry the luxury. */
+.hero{
+  background:
+    radial-gradient(circle at 50% 34%,rgba(255,255,255,.88),rgba(234,242,251,.62) 55%,rgba(207,224,240,.72));
+  color:var(--blue-deep);
+}
+.hero:after{
+  display:none;
+}
+.hero .hero-glow{
+  background:rgba(230,199,141,.25);
+  mix-blend-mode:normal;
+}
+.hero-frame:before{
+  display:none;
+}
+.hero-frame .eyebrow{
+  color:#7d531d;
+  text-shadow:0 1px 0 rgba(255,255,255,.8);
+}
+.hero-frame h1{
+  color:#183452;
+  text-shadow:0 2px 0 rgba(255,255,255,.9),0 4px 12px rgba(26,52,82,.16);
+}
+.hero-frame h1 span{
+  color:#a9782f;
+}
+.hero-frame .gold-rule{
+  border-color:var(--gold);
+}
+.hero-frame .gold-rule i{
+  background:var(--paper);
+  color:var(--gold);
+  text-shadow:none;
+}
+.hero-frame .hero-date{
+  color:#234668;
+  text-shadow:0 1px 0 rgba(255,255,255,.8);
+}
+.hero-frame .hero-caption{
+  color:#365979;
+  background:rgba(251,252,254,.82);
+  border:1px solid rgba(201,160,90,.2);
+  text-shadow:0 1px 0 rgba(255,255,255,.9);
+}
+.hero .floral-left,.hero .floral-right,
+.hero .flower-frame,.hero .hero-garden:before{
+  opacity:.92;
+  filter:saturate(1.18) contrast(1.16) drop-shadow(0 8px 10px rgba(34,66,99,.16));
+}
+.hero .floral-left,.hero .flower-frame-top-left{
+  filter:saturate(1.2) contrast(1.2) drop-shadow(2px 8px 9px rgba(34,66,99,.2));
+}
+.hero .floral-right,.hero .flower-frame-top-right{
+  filter:saturate(1.2) contrast(1.2) drop-shadow(-2px 8px 9px rgba(34,66,99,.2));
+}
+.hero .flower-frame-bottom-left,.hero .flower-frame-bottom-right{
+  opacity:.98;
+  filter:saturate(1.25) contrast(1.2) drop-shadow(0 7px 9px rgba(34,66,99,.2));
+}
+.hero .hero-garden:before{
+  opacity:.96;
+  filter:saturate(1.18) contrast(1.15) drop-shadow(0 10px 12px rgba(34,66,99,.18));
+}
+.hero .scroll-cue{
+  color:var(--blue-deep);
+  background:rgba(251,252,254,.88);
+  border:1px solid rgba(201,160,90,.3);
+}
+.hero .scroll-cue small{
+  color:#536b86;
+  text-shadow:0 1px 0 rgba(255,255,255,.85);
+}
+.hero .scroll-cue span{
+  background:rgba(255,255,255,.72);
+  color:var(--gold);
+}
+.hero .scroll-cue b{
+  color:var(--blue-deep);
+}
+
+/* Floral corner frames for the story pages. */
+.page-floral-frame{
+  position:absolute;
+  z-index:0;
+  inset:0;
+  pointer-events:none;
+  overflow:hidden;
+}
+.frame-floral{
+  position:absolute;
+  display:block;
+  width:160px;
+  height:160px;
+  background-repeat:no-repeat;
+  background-size:contain;
+  filter:saturate(1.08) contrast(1.08) drop-shadow(0 6px 8px rgba(34,66,99,.13));
+  opacity:.66;
+  animation:frameFloralFloat 8s ease-in-out infinite;
+}
+.frame-floral-tl{
+  top:-14px;
+  left:-14px;
+  background-image:url("assets/floral-tl.png");
+  transform-origin:0 0;
+}
+.frame-floral-tr{
+  top:-14px;
+  right:-14px;
+  background-image:url("assets/floral-tr.png");
+  animation-delay:-2s;
+  transform-origin:100% 0;
+}
+.frame-floral-bl{
+  bottom:-14px;
+  left:-14px;
+  background-image:url("assets/floral-bl.png");
+  animation-delay:-5s;
+  transform-origin:0 100%;
+}
+.frame-floral-br{
+  right:-14px;
+  bottom:-14px;
+  background-image:url("assets/floral-br.png");
+  animation-delay:-3.5s;
+  transform-origin:100% 100%;
+}
+.section-mempelai .frame-floral{opacity:.7}
+.section-acara .frame-floral{opacity:.58;transform:scale(.86)}
+.section-lokasi .frame-floral{opacity:.64;transform:scale(.92)}
+.section-acara .frame-floral-tr,
+.section-lokasi .frame-floral-tr{transform:scaleX(-1) scale(.86)}
+.section-acara .frame-floral-br,
+.section-lokasi .frame-floral-br{transform:scaleX(-1) scale(.86)}
+@keyframes frameFloralFloat{
+  0%,100%{filter:saturate(1.08) contrast(1.08) drop-shadow(0 6px 8px rgba(34,66,99,.13));}
+  50%{filter:saturate(1.18) contrast(1.12) drop-shadow(0 9px 11px rgba(34,66,99,.2));}
+}
+@media(max-width:420px){
+  .frame-floral{width:118px;height:118px}
+  .frame-floral-tl,.frame-floral-tr{top:-8px}
+  .frame-floral-bl,.frame-floral-br{bottom:-8px}
+  .frame-floral-tl,.frame-floral-bl{left:-8px}
+  .frame-floral-tr,.frame-floral-br{right:-8px}
+}
+@media(prefers-reduced-motion:reduce){
+  .frame-floral{animation:none!important}
+}
