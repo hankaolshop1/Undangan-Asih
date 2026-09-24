@@ -3,11 +3,8 @@
   const pages = [...document.querySelectorAll(".page")];
   const cover = document.getElementById("cover");
   const openBtn = document.getElementById("openInvitation");
-  const prevBtn = document.getElementById("prevBtn");
-  const nextBtn = document.getElementById("nextBtn");
-  const dotsWrap = document.getElementById("dots");
+  const tabs = [...document.querySelectorAll(".tab")];
   const counter = document.getElementById("counter");
-  const label = document.getElementById("pageLabel");
   const veil = document.getElementById("veil");
   const music = document.getElementById("weddingMusic");
   const musicBtn = document.getElementById("musicToggle");
@@ -21,7 +18,7 @@
 
   // Kelopak berjatuhan
   const petals = document.getElementById("petals");
-  for (let i = 0; i < 16; i++) {
+  for (let i = 0; i < 14; i++) {
     const p = document.createElement("span");
     p.className = "petal" + (i % 3 === 0 ? " blue" : "");
     p.style.left = Math.random() * 100 + "%";
@@ -31,23 +28,26 @@
     petals.appendChild(p);
   }
 
-  // Titik navigasi
-  pages.forEach((_, i) => {
-    const d = document.createElement("button");
-    d.className = "dot";
-    d.setAttribute("aria-label", "Halaman " + (i + 1));
-    d.addEventListener("click", () => go(i));
-    dotsWrap.appendChild(d);
+  document.querySelectorAll(".page-petals").forEach((layer, pageIndex) => {
+    for (let i = 0; i < 7; i++) {
+      const petal = document.createElement("span");
+      petal.className = "page-petal" + ((i + pageIndex) % 4 === 0 ? " blue" : "");
+      petal.style.left = `${8 + Math.random() * 84}%`;
+      petal.style.animationDuration = `${11 + Math.random() * 8}s`;
+      petal.style.animationDelay = `${-(Math.random() * 14 + pageIndex * .7)}s`;
+      petal.style.setProperty("--drift", `${-35 + Math.random() * 70}px`);
+      petal.style.setProperty("--scale", `${(.55 + Math.random() * .55).toFixed(2)}`);
+      layer.appendChild(petal);
+    }
   });
-  const dots = [...dotsWrap.children];
 
   function updateUi() {
-    dots.forEach((d, i) => d.classList.toggle("on", i === current));
+    tabs.forEach((t, i) => {
+      const on = i === current;
+      t.classList.toggle("on", on);
+      if (on) t.setAttribute("aria-current", "page"); else t.removeAttribute("aria-current");
+    });
     counter.innerHTML = `<b>${String(current + 1).padStart(2, "0")}</b> / ${String(pages.length).padStart(2, "0")}`;
-    label.textContent = pages[current].dataset.label;
-    prevBtn.disabled = current === 0;
-    nextBtn.disabled = current === pages.length - 1;
-    // Muat peta hanya saat halaman lokasi dibuka
     const iframe = pages[current].querySelector("iframe[data-src]");
     if (iframe && !iframe.src) iframe.src = iframe.dataset.src;
     try { localStorage.setItem(KEY, current); } catch {}
@@ -64,20 +64,19 @@
     busy = true;
     const dir = target > current ? "next" : "prev";
     const from = pages[current];
-    const to = pages[target];
-    document.getElementById("swipeHint").classList.remove("show");
+    const toP = pages[target];
 
-    to.classList.remove("anim");
-    to.classList.add(dir === "next" ? "from-next" : "from-prev");
-    void to.offsetWidth; // reflow
+    toP.classList.remove("anim");
+    toP.classList.add(dir === "next" ? "from-next" : "from-prev");
+    void toP.offsetWidth;
     from.classList.add("anim");
-    to.classList.add("anim");
+    toP.classList.add("anim");
     requestAnimationFrame(() => {
       from.classList.add(dir === "next" ? "to-next" : "to-prev");
       from.classList.remove("is-active");
-      to.classList.remove("from-next", "from-prev");
-      to.classList.add("is-active");
-      to.querySelector(".page-inner").scrollTop = 0;
+      toP.classList.remove("from-next", "from-prev");
+      toP.classList.add("is-active");
+      toP.querySelector(".page-inner").scrollTop = 0;
     });
     veil.classList.remove("go"); void veil.offsetWidth; veil.classList.add("go");
 
@@ -89,8 +88,7 @@
     }, 1050);
   }
 
-  prevBtn.addEventListener("click", () => go(current - 1));
-  nextBtn.addEventListener("click", () => go(current + 1));
+  tabs.forEach((t) => t.addEventListener("click", () => go(+t.dataset.go)));
 
   document.addEventListener("keydown", (e) => {
     if (!stage.classList.contains("ready")) return;
@@ -99,17 +97,17 @@
     if (e.key === "ArrowLeft" || e.key === "PageUp") go(current - 1);
   });
 
-  // Geser (swipe) di ponsel
+  // Geser (swipe) tetap berfungsi di ponsel
   let sx = 0, sy = 0;
   stage.addEventListener("touchstart", (e) => { sx = e.touches[0].clientX; sy = e.touches[0].clientY; }, { passive: true });
   stage.addEventListener("touchend", (e) => {
     if (!stage.classList.contains("ready")) return;
+    if (e.target.closest(".tabbar")) return;
     const dx = e.changedTouches[0].clientX - sx;
     const dy = e.changedTouches[0].clientY - sy;
     if (Math.abs(dx) > 50 && Math.abs(dx) > Math.abs(dy) * 1.3) go(current + (dx < 0 ? 1 : -1));
   }, { passive: true });
 
-  // Membuka sampul (pintu)
   openBtn.addEventListener("click", () => {
     cover.classList.add("is-open");
     let saved = 0;
@@ -140,12 +138,8 @@
   document.querySelectorAll(".copy-btn").forEach((b) => {
     b.addEventListener("click", async () => {
       const txt = b.textContent;
-      try {
-        await navigator.clipboard.writeText(b.dataset.copy);
-        b.textContent = "Tersalin ✓";
-      } catch {
-        b.textContent = b.dataset.copy;
-      }
+      try { await navigator.clipboard.writeText(b.dataset.copy); b.textContent = "Tersalin ✓"; }
+      catch { b.textContent = b.dataset.copy; }
       b.classList.add("ok");
       setTimeout(() => { b.textContent = txt; b.classList.remove("ok"); }, 1800);
     });
