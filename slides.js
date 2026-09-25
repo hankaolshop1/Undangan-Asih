@@ -85,7 +85,7 @@
     setTimeout(() => {
       from.classList.remove("anim", "to-next", "to-prev");
       busy = false;
-    }, 1050);
+    }, 2050);
   }
 
   tabs.forEach((t) => t.addEventListener("click", () => go(+t.dataset.go)));
